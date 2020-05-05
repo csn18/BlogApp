@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+
+{% block main %}
+
+  <div class="container" id="body_st">
+    <div class="row">
+      <div class="col-6 img-content">
+        <img src="{{ object.image.url }}" alt="" id="img_st">
+      </div>
+      <div class="col-6 title-content">
+        <div class="info-content">
+          <h4><b>{{ object.title }}</b></h4>
+          <p>{{ object.publication_date|date:'j E Y • H:i' }} <br> <i class="fas fa-eye"></i> 165</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8 text-content">
+          <h5>{{ object.text|safe }}</h5>
+        </div>
+        <div class="col-4 top-container">
+          <div class="top-content">
+            <h5>&#128293;<b>Последние новости</b></h5>
+            {% for post in posts %}
+              <div class="records-to-top">
+                <div class="row">
+                  <div class="col-9 title-top-content">
+                    <p><b>{{ post.title|striptags|truncatechars:45 }}</b></p>
+                  </div>
+                  <div class="col-3">
+                    <img src="{{ post.image.url }}" alt="" id="img_top">
+                  </div>
+                </div>
+
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

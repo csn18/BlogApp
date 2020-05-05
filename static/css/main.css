@@ -1,0 +1,156 @@
+footer {
+    flex: 0.01 0 auto;
+    padding: 30px;
+    background: #343a40;
+    color: #f1efef;
+    float: left;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+    font-size: 18px;
+    padding: 0.25rem;
+}
+
+hr {
+    border: none;
+    background: white;
+    color: white;
+    height: 1px;
+    width: 1120px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#post h3, h4, h5 {
+    color: white;
+}
+
+#footer_content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#footer_content a {
+    color: white;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+#footer_content a:hover {
+    color: black;
+}
+
+#img {
+    height: 240px;
+    max-width: 360px;
+    max-height: 360px;
+    border-radius: 20px;
+}
+
+#post_list {
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+#post_list h5 {
+    padding: 15px;
+    margin: auto;
+    max-height: 100px;
+    height: 100px;
+}
+
+#post_list a {
+    color: white;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+#post_list h5:hover {
+    color: rgba(255, 255, 255, 0.52);
+}
+
+#post_list p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#body_st {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+#img_st {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 30px;
+}
+
+#img_top {
+    height: 40px;
+    width: auto;
+    border-radius: 0.4rem;
+    margin: 10px 0 10px 0;
+}
+
+.title-top-content {
+    padding: 15px;
+}
+
+.records-to-top {
+    height: 80px;
+    width: auto;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.background {
+    background-color: #212529;
+    min-height: 1080px;
+    height: auto;
+}
+
+.nav-link {
+    color: white;
+}
+
+.text-content {
+    padding: 30px;
+}
+
+.img-content {
+    padding: 20px;
+}
+
+.title-content {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+}
+
+.title-content .info-content {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.625em;
+}
+
+.top-container {
+    padding: 50px 30px;
+}
+
+.top-content {
+    background: #282c34;
+    border-radius: 20px;
+    padding: 0 20px;
+    width: 360px;
+    height: 450px;
+    text-align: center;
+}
+
+.top-content h5 {
+    padding: 20px;
+}
+
