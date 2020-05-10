@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+
+{% block main %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8" id="post_list">
+        <div class="row">
+          {% for post in news %}
+            <div class="col-6" id="post">
+              <img id="img" src="{{ post.image.url }}" alt="Изображение поста">
+              <a href="{% url 'news-detail' post.id %}"><h5>{{ post.title|striptags|truncatechars:75 }}</h5></a>
+              <p>{{ post.publication_date|date:'j E Y в H:i' }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-4 category">
+        <div class="category-content">
+          <h4>Категории</h4>
+          <div class="row">
+            <div class="col-10">
+              <a href="{% url 'news-technologies' %}"><h5>Технологии</h5></a>
+              <a href="{% url 'news-internet' %}"><h5>Интренет</h5></a>
+              <a href="{% url 'news-russia' %}"><h5>Россия</h5></a>
+              <a href="{% url 'news-ukraine' %}"><h5>Украина</h5></a>
+              <a href="{% url 'news-siriy' %}"><h5>Сирия</h5></a>
+              <a href="{% url 'news-usa' %}"><h5>США</h5></a>
+              <a href="{% url 'news-people' %}"><h5>Люди</h5></a>
+              <a href="{% url 'news-it' %}"><h5>IT</h5></a>
+            </div>
+            <div class="col-2">
+              {% for key, value in category.items %}
+                <h5>{{ value }}</h5>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

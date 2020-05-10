@@ -9,8 +9,9 @@
       </div>
       <div class="col-6 title-content">
         <div class="info-content">
-          <h4><b>{{ object.title }}</b></h4>
-          <p>{{ object.publication_date|date:'j E Y • H:i' }} <br> <i class="fas fa-eye"></i> 165</p>
+          <h4><strong>{{ object.title }}</strong></h4>
+          <p>{{ object.publication_date|date:'j E Y • H:i' }}<br><br>
+            {{ object.category.name }}</p>
         </div>
       </div>
       <div class="row">
@@ -19,12 +20,15 @@
         </div>
         <div class="col-4 top-container">
           <div class="top-content">
-            <h5>&#128293;<b>Последние новости</b></h5>
-            {% for post in posts %}
+            <h5>&#128293;<strong>Последние новости</strong></h5>
+            {% for post in news %}
               <div class="records-to-top">
+
                 <div class="row">
                   <div class="col-9 title-top-content">
-                    <p><b>{{ post.title|striptags|truncatechars:45 }}</b></p>
+                    <a href="{% url 'news-detail' post.id %}"><p>
+                      <strong>{{ post.title|striptags|truncatechars:80 }}</strong></p>
+                    </a>
                   </div>
                   <div class="col-3">
                     <img src="{{ post.image.url }}" alt="" id="img_top">
@@ -33,6 +37,9 @@
 
               </div>
             {% endfor %}
+            <div class="button-st">
+              <a href="{% url 'st-home' %}">СМОТРЕТЬ ВСЕ</a>
+            </div>
           </div>
         </div>
       </div>

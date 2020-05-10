@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block main %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8" id="post_list">
+        <div class="row">
+          {% for post in posts %}
+            <div class="col-6" id="post">
+              <img id="img" src="{{ post.image.url }}" alt="Изображение поста">
+              <a href="{% url 'st-detail' post.id %}"><h5>{{ post.title|striptags|truncatechars:75 }}</h5></a>
+              <p>{{ post.publication_date|date:'j E Y в H:i' }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-4 category">
+        <div class="category-content">
+          <h4>Категории</h4>
+          <div class="row">
+            <div class="col-10">
+              <a href="{% url 'articles-programming' %}"><h5>Программирование</h5></a>
+              <a href="{% url 'articles-new_tecnologies' %}"><h5>Новые технологии</h5></a>
+              <a href="{% url 'articles-it' %}"><h5>IT-сфера</h5></a>
+              <a href="{% url 'articles-os' %}"><h5>OS</h5></a>
+              <a href="{% url 'articles-mac_ios' %}"><h5>Mac iOS</h5></a>
+            </div>
+            <div class="col-2">
+              {% for key, value in category.items %}
+                <h5>{{ value }}</h5>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

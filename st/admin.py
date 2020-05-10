@@ -3,3 +3,4 @@ from .models import *
 
 
 admin.site.register(Articles)
+admin.site.register(CategoryArticles)
