@@ -8,7 +8,9 @@
         <div class="row">
           {% for post in posts %}
             <div class="col-6" id="post">
-              <img id="img" src="{{ post.image.url }}" alt="Изображение поста">
+              <div class="image">
+                <img id="img_post" src="{{ post.image.url }}" alt="Изображение поста">
+              </div>
               <a href="{% url 'st-detail' post.id %}"><h5>{{ post.title|striptags|truncatechars:75 }}</h5></a>
               <p>{{ post.publication_date|date:'j E Y в H:i' }}</p>
             </div>
@@ -21,7 +23,7 @@
           <div class="row">
             <div class="col-10">
               <a href="{% url 'articles-programming' %}"><h5>Программирование</h5></a>
-              <a href="{% url 'articles-new_tecnologies' %}"><h5>Новые технологии</h5></a>
+              <a href="{% url 'articles-new_technologies' %}"><h5>Новые технологии</h5></a>
               <a href="{% url 'articles-it' %}"><h5>IT-сфера</h5></a>
               <a href="{% url 'articles-os' %}"><h5>OS</h5></a>
               <a href="{% url 'articles-mac_ios' %}"><h5>Mac iOS</h5></a>

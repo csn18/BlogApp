@@ -32,12 +32,12 @@ class ArticlesProgramming(ListView):
         return ctx
 
 
-class ArticlesNewTecnologies(ListView):
+class ArticlesNewTechnologies(ListView):
     model = Articles
-    template_name = 'st/articles_new_tecnologies.html'
+    template_name = 'st/articles_new_technologies.html'
 
     def get_context_data(self, **kwargs):
-        ctx = super(ArticlesNewTecnologies, self).get_context_data(**kwargs)
+        ctx = super(ArticlesNewTechnologies, self).get_context_data(**kwargs)
         ctx['posts'] = Articles.objects.filter(category=2).order_by('-id')
         ctx['title'] = 'Новые технологии'
         ctx['category'] = get_category()

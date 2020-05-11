@@ -45,7 +45,11 @@
         <div class="row">
           {% for post in news %}
             <div class="col-4" id="post">
-              <img id="img" src="{{ post.image.url }}" alt="Изображение поста">
+              <div class="image">
+                <div class="image">
+                  <img id="img_post" src="{{ post.image.url }}" alt="Изображение поста">
+                </div>
+              </div>
               <a href="{% url 'news-detail' post.id %}"><h5>{{ post.title|striptags|truncatechars:75 }}</h5></a>
               <p>{{ post.publication_date|date:'j E Y в H:i' }}</p>
             </div>
