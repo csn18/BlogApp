@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from django.http import HttpRequest
+from django.http import HttpRequest, JsonResponse
 from .models import *
 
 
@@ -19,9 +19,12 @@ class NewsView(ListView):
         return ctx
 
 
+def news(request):
+    return JsonResponse({'hi': 'h1'})
+
 class NewsTechnologies(ListView):
     model = News
-    template_name = 'news/news_technologies.html'
+    template_name = 'news/news_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(NewsTechnologies, self).get_context_data(**kwargs)
@@ -34,7 +37,7 @@ class NewsTechnologies(ListView):
 
 class NewsInternet(ListView):
     model = News
-    template_name = 'news/news_internet.html'
+    template_name = 'news/news_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(NewsInternet, self).get_context_data(**kwargs)
@@ -47,7 +50,7 @@ class NewsInternet(ListView):
 
 class NewsRussia(ListView):
     model = News
-    template_name = 'news/news_russia.html'
+    template_name = 'news/news_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(NewsRussia, self).get_context_data(**kwargs)
@@ -60,7 +63,7 @@ class NewsRussia(ListView):
 
 class NewsUkraine(ListView):
     model = News
-    template_name = 'news/news_ukraine.html'
+    template_name = 'news/news_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(NewsUkraine, self).get_context_data(**kwargs)
@@ -73,7 +76,7 @@ class NewsUkraine(ListView):
 
 class NewsSiriy(ListView):
     model = News
-    template_name = 'news/news_siriy.html'
+    template_name = 'news/news_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(NewsSiriy, self).get_context_data(**kwargs)
@@ -86,7 +89,7 @@ class NewsSiriy(ListView):
 
 class NewsUSA(ListView):
     model = News
-    template_name = 'news/news_usa.html'
+    template_name = 'news/news_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(NewsUSA, self).get_context_data(**kwargs)
@@ -99,7 +102,7 @@ class NewsUSA(ListView):
 
 class NewsPeople(ListView):
     model = News
-    template_name = 'news/news_people.html'
+    template_name = 'news/news_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(NewsPeople, self).get_context_data(**kwargs)
@@ -112,7 +115,7 @@ class NewsPeople(ListView):
 
 class NewsIT(ListView):
     model = News
-    template_name = 'news/news_it.html'
+    template_name = 'news/news_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(NewsIT, self).get_context_data(**kwargs)

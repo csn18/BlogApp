@@ -21,7 +21,7 @@ class AllArticlesView(ListView):
 
 class ArticlesProgramming(ListView):
     model = Articles
-    template_name = 'st/articles_programming.html'
+    template_name = 'st/articles_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(ArticlesProgramming, self).get_context_data(**kwargs)
@@ -34,7 +34,7 @@ class ArticlesProgramming(ListView):
 
 class ArticlesNewTechnologies(ListView):
     model = Articles
-    template_name = 'st/articles_new_technologies.html'
+    template_name = 'st/articles_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(ArticlesNewTechnologies, self).get_context_data(**kwargs)
@@ -47,7 +47,7 @@ class ArticlesNewTechnologies(ListView):
 
 class ArticlesIT(ListView):
     model = Articles
-    template_name = 'st/articles_it.html'
+    template_name = 'st/articles_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(ArticlesIT, self).get_context_data(**kwargs)
@@ -60,7 +60,7 @@ class ArticlesIT(ListView):
 
 class ArticlesOS(ListView):
     model = Articles
-    template_name = 'st/articles_os.html'
+    template_name = 'st/articles_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(ArticlesOS, self).get_context_data(**kwargs)
@@ -73,7 +73,7 @@ class ArticlesOS(ListView):
 
 class ArticlesMacIOS(ListView):
     model = Articles
-    template_name = 'st/articles_mac_ios.html'
+    template_name = 'st/articles_category.html'
 
     def get_context_data(self, **kwargs):
         ctx = super(ArticlesMacIOS, self).get_context_data(**kwargs)

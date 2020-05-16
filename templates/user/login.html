@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% load crispy_forms_filters %}
+
+{% block main %}
+
+  <div class="container" id="register">
+    <h3>Для авторизации заполните личные данные:</h3>
+    <form method="post">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <h6>
+      <button type="submit" class="btn btn-link text-center">Авторизоваться</button>
+      <a href="{% url 'register' %}" class="text-center">Регистрация</a>
+      </h6>
+    </form>
+  </div>
+
+{% endblock %}
