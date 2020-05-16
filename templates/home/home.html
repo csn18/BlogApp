@@ -6,8 +6,8 @@
     <div class="main-news">
       {% for item in main_news %}
         <img src="{{ item.image.url }}" alt="" id="main-image">
-        <a href="{% url 'news-detail' item.id %}"><h5><strong>{{ item.title }}</strong>
-        {{ item.text|striptags|truncatechars:245 }}</h5></a>
+        <a href="{% url 'news-detail' item.id %}"><h5><strong>{{ item.title }}</strong><br><br>
+          {{ item.text|striptags|truncatechars:245 }}</h5></a>
         </div>
       {% endfor %}
   </div>
@@ -32,8 +32,8 @@
       {% for post in st %}
         <div class="col-4" id="post">
           <div class="image">
-  <img id="img_post" src="{{ post.image.url }}" alt="Изображение поста">
-</div>
+            <img id="img_post" src="{{ post.image.url }}" alt="Изображение поста">
+          </div>
           <a href="{% url 'st-detail' post.id %}"><h5>{{ post.title|striptags|truncatechars:75 }}</h5></a>
           <p>{{ post.publication_date|date:'j E Y в H:i' }}</p>
         </div>
