@@ -40,14 +40,23 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'st-home' %}">Статьи</a>
         </li>
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'profile' %}">Профиль</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Войти</a>
+          </li>
+        {% endif %}
       </ul>
     </div>
   </nav>
 
   {% block main %}
-
   {% endblock %}
 
+</div>
 <footer class="text-muted" id="footer">
   <div class="container" id="footer_content">
     <div class="row">
@@ -62,13 +71,11 @@
         <li><strong>СОЦИАЛЬНЫЕ СЕТИ</strong></li>
         <li><i class="fab fa-telegram"></i> <a href="#">Телеграм</a></li>
         <li><i class="fab fa-vk"></i> <a href="#">Вконтакте</a></li>
-        <li><i class="fab fa-facebook-square"> </i><a href="#">  Facebook</a></li>
+        <li><i class="fab fa-facebook-square"> </i><a href="#"> Facebook</a></li>
       </div>
       <div class="col-4"></div>
     </div>
   </div>
 </footer>
-
-</div>
 </body>
 </html>
