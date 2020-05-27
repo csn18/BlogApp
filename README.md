@@ -4,7 +4,7 @@
 
 **Окружение:**
 
-1. Database - **SQLite3**
+1. Database - **MySQL**
 2. Server - **Django 2.2**
 3. Web - **Html/CSS**
 
