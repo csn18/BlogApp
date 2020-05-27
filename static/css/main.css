@@ -131,8 +131,9 @@ hr {
 
 #main-image {
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.75);
-    max-width: 1000px;
-    max-height: 1000px;
+    /*max-width: 1000px;*/
+    width: auto;
+    /*max-height: 1000px;*/
     border-radius: 30px;
     -webkit-filter: brightness(40%);
 }
@@ -331,9 +332,10 @@ hr {
 .top-content {
     background: #282c34;
     border-radius: 20px;
-    width: 420px;
+    width: auto;
     height: 480px;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
+    font-family: 'Nunito', sans-serif;
 }
 
 .button-st a {
@@ -448,11 +450,61 @@ hr {
 }
 
 #profile a {
-    color: white;
+    color: rgba(255, 255, 255, 0.52);
     text-decoration: none;
 }
 
 #profile a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#profile h5 {
+    color: white;
+}
+
+#img_profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.75);
+}
+
+#user_info {
+    font-family: 'Nunito', sans-serif;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#data_of_user {
+    margin: 20px auto;
+}
+
+#data h5 {
+    font-family: 'Nunito', sans-serif;
+    color: rgba(255, 255, 255, 0.52);
+}
+
+#update {
     color: rgba(255, 255, 255, 0.52);
     text-decoration: none;
+}
+
+#register a {
+    font-size: 1.25rem;
+}
+
+#login a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+#btn_link {
+    font-size: 1.25rem;
+    color: white;
+    padding: 2px 12px 6px 12px;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
 }
