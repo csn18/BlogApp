@@ -1,6 +1,7 @@
 Django==3.0.6
 django-crispy-forms==1.9.0
 Jinja2==2.11.1
+gunicorn
 Pillow==6.2.1
 pipenv==2020.6.2
 requests==2.23.0
