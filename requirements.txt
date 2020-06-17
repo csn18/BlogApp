@@ -5,4 +5,4 @@ gunicorn
 Pillow==6.2.1
 pipenv==2020.6.2
 requests==2.23.0
-
+whitenoise==5.1.0
