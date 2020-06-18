@@ -1,4 +1,10 @@
-**http://79.141.174.137/**
+https://secret-refuge-00508.herokuapp.com/
+
+For run docker:
+
+$ docker-compose build
+
+$ docker-compose up
 
 **Техническое задание**
 
