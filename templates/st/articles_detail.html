@@ -15,10 +15,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-8 text-content">
+        <div class="col-7 text-content">
           <h5>{{ object.text|safe }}</h5>
         </div>
-        <div class="col-4 top-container">
+        <div class="col-5 top-container">
           <div class="top-content">
             <h5>&#128293;<strong>Последние новости</strong></h5>
             {% for post in news %}
@@ -30,7 +30,7 @@
                       <strong>{{ post.title|striptags|truncatechars:80 }}</strong></p>
                     </a>
                   </div>
-                  <div class="col-3">
+                  <div class="col-3" id="img_block">
                     <img src="{{ post.image.url }}" alt="" id="img_top">
                   </div>
                 </div>

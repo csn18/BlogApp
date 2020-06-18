@@ -508,3 +508,7 @@ hr {
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
 }
+
+#img_block {
+    margin: auto;
+}
