@@ -4,22 +4,22 @@
 
   <div class="container" id="body_st">
     <div class="row">
-      <div class="col-6 img-content">
+      <div class="col-6 img-content wow fadeInLeft" data-wow-delay="1s">
         <img src="{{ object.image.url }}" alt="" id="img_st">
       </div>
       <div class="col-6 title-content">
-        <div class="info-content">
+        <div class="info-content wow fadeIn" data-wow-delay="1s">
           <h4><strong>{{ object.title }}</strong></h4>
           <p>{{ object.publication_date|date:'j E Y • H:i' }}<br><br>
             {{ object.category.name }}</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-7 text-content">
+        <div class="col-7 text-content wow fadeIn" data-wow-delay="1s">
           <h5>{{ object.text|safe }}</h5>
         </div>
         <div class="col-5 top-container">
-          <div class="top-content">
+          <div class="top-content wow fadeInRight" data-wow-delay="1s">
             <h5>&#128293;<strong>Последние новости</strong></h5>
             {% for post in news %}
               <div class="records-to-top">

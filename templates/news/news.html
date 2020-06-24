@@ -4,33 +4,33 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-8" id="slider">
-        <ul class="bxslider text-center">
+      <div class="col-8 category wow fadeInLeft" data-wow-delay="0.5s" id="slider">
+        <ul class="bxslider">
           {% for item in img_to_slider %}
           <li>
-            <img class="img-slider" src="{{ item.image.url }}" />
+            <img class="img-slider" src="{{ item.image.url }}"  alt=""/>
             <a href="{% url 'news-detail' item.id %}"><h5><strong>{{ item.title|striptags|truncatechars:75 }}</strong></h5></a>
           </li>
           {% endfor %}
         </ul>
       </div>
-      <div class="col-4 category">
+      <div class="col-4 category wow fadeInRight" data-wow-delay="0.5s">
         <div class="category-content">
-          <h4>Категории&#128209;</h4>
+          <h4 class="wow fadeIn" data-wow-delay="1s">Категории&#128209;</h4>
           <div class="row">
             <div class="col-10">
-              <a href="{% url 'news-technologies' %}"><h5><b>Технологии</b></h5></a>
-              <a href="{% url 'news-internet' %}"><h5><b>Интренет</b></h5></a>
-              <a href="{% url 'news-russia' %}"><h5><b>Россия</b></h5></a>
-              <a href="{% url 'news-ukraine' %}"><h5><b>Украина</b></h5></a>
-              <a href="{% url 'news-siriy' %}"><h5><b>Сирия</b></h5></a>
-              <a href="{% url 'news-usa' %}"><h5><b>США</b></h5></a>
-              <a href="{% url 'news-people' %}"><h5><b>Люди</b></h5></a>
-              <a href="{% url 'news-it' %}"><h5><b>IT</b></h5></a>
+              <a href="{% url 'news-technologies' %}"><h5 class="wow fadeIn" data-wow-delay="1s">Технологии</h5></a>
+              <a href="{% url 'news-internet' %}"><h5 class="wow fadeIn" data-wow-delay="1s">Интренет</h5></a>
+              <a href="{% url 'news-russia' %}"><h5 class="wow fadeIn" data-wow-delay="1s">Россия</h5></a>
+              <a href="{% url 'news-ukraine' %}"><h5 class="wow fadeIn" data-wow-delay="1s">Украина</h5></a>
+              <a href="{% url 'news-siriy' %}"><h5 class="wow fadeIn" data-wow-delay="1s">Сирия</h5></a>
+              <a href="{% url 'news-usa' %}"><h5 class="wow fadeIn" data-wow-delay="1s">США</h5></a>
+              <a href="{% url 'news-people' %}"><h5 class="wow fadeIn" data-wow-delay="1s">Люди</h5></a>
+              <a href="{% url 'news-it' %}"><h5 class="wow fadeIn" data-wow-delay="1s">IT</h5></a>
             </div>
             <div class="col-2">
               {% for key, value in category.items %}
-                <h5>{{ value }}</h5>
+                <h5 class="wow fadeIn" data-wow-delay="1s">{{ value }}</h5>
               {% endfor %}
             </div>
           </div>
@@ -41,7 +41,7 @@
 
 
   <div class="container">
-      <div id="post_list">
+      <div id="post_list" class="wow fadeIn" data-wow-delay="0.5s">
         <div class="row">
           {% for post in news %}
             <div class="col-4" id="post">

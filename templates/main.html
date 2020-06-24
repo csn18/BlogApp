@@ -6,6 +6,7 @@
 
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
   <link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
@@ -17,61 +18,62 @@
   <script src="https://kit.fontawesome.com/4fea9ef33a.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
 
+  <script src="{% static 'js/wow.min.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
 
   <title>{{ title }}</title>
+
 </head>
 <body>
 
 <div class="background">
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08"
-            aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav wow fadeInDown" data-wow-delay="0.4s">
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'home-home' %}"><i class="fas fa-home"></i> Главная</a>
+          <img src="/media/media/logo/logo.png" id="logo" alt="">
+        </li>
+        <li class="nav-item" id="logo_name">
+          <h5><b>CSN PROD</b></h5>
+          <h6>BLOG APPLICATION</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'news-home' %}">Новости</a>
+          <a class="nav-link infoclass" href="{% url 'home-home' %}">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'st-home' %}">Статьи</a>
+          <a class="nav-link infoclass" href="{% url 'news-home' %}">Новости</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link infoclass" href="{% url 'st-home' %}">Статьи</a>
         </li>
         {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'profile' %}">Профиль</a>
+            <a class="nav-link infoclass" href="{% url 'profile' %}">Профиль</a>
           </li>
         {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}">Войти</a>
+            <a class="nav-link infoclass" href="{% url 'login' %}">Войти</a>
           </li>
         {% endif %}
       </ul>
     </div>
   </nav>
-
   {% block main %}
   {% endblock %}
-
 </div>
+
 <footer class="text-muted" id="footer">
   <div class="container" id="footer_content">
     <div class="row">
-      <div class="col-4">
+      <div class="col-4 wow fadeIn" data-wow-delay="0.5s">
         <li><strong>НАВИГАЦИЯ</strong></li>
-        <li><a href="#">О нас</a></li>
         <li><a href="{% url 'st-home' %}">Статьи</a></li>
         <li><a href="{% url 'news-home' %}">Новости</a></li>
-        <li><a href="#">Информация</a></li>
       </div>
-      <div class="col-4">
+      <div class="col-4 wow fadeIn" data-wow-delay="0.5s">
         <li><strong>СОЦИАЛЬНЫЕ СЕТИ</strong></li>
-        <li><i class="fab fa-telegram"></i> <a href="#">Телеграм</a></li>
-        <li><i class="fab fa-vk"></i> <a href="#">Вконтакте</a></li>
-        <li><i class="fab fa-facebook-square"> </i><a href="#"> Facebook</a></li>
+        <li><i class="fab fa-telegram"></i> <a href="https://teleg.one/f0rest18">Телеграм</a></li>
+        <li><i class="fab fa-vk"></i> <a href="https://vk.com/forse00">Вконтакте</a></li>
       </div>
       <div class="col-4"></div>
     </div>
