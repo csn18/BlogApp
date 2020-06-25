@@ -5,7 +5,7 @@
   <div class="container wow fadeIn" data-wow-delay="1s">
     <div class="main-news">
       {% for item in main_news %}
-        <img src="{{ item.image.url }}" alt="" id="main-image">
+        <img src="{{ item.image.url }}" alt="" id="main-image" class="responsive">
         <a data-wow-delay="0.7s" href="{% url 'news-detail' item.id %}"><h5><strong>{{ item.title }}</strong><br><br>
           {{ item.text|striptags|truncatechars:245 }}</h5></a>
         </div>
@@ -19,7 +19,7 @@
       {% for post in news %}
         <div class="col-4 wow fadeInUp" data-wow-delay="0.1s" id="post">
           <div class="image">
-            <img id="img_post" src="{{ post.image.url }}" alt="Изображение поста">
+            <img id="img_post" src="{{ post.image.url }}" alt="Изображение поста" class="responsive">
           </div>
           <a href="{% url 'news-detail' post.id %}"><h5>{{ post.title|striptags|truncatechars:75 }}</h5></a>
           <p>{{ post.publication_date|date:'j E Y в H:i' }}</p>
